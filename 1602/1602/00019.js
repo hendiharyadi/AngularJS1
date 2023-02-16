@@ -11,7 +11,12 @@
 // Urutan hewan dalam array setiap pengelompokan huruf tidak penting.
 
 function groupAnimals(animals) {
-  // you can only write your code here!
+  let grup = animals.sort();
+  for (let i = 0; i < animals.length; i++){
+
+  }
+  return grup;
+  
 }
 
 // TEST CASES

@@ -4,7 +4,20 @@
 // Function akan me-return string tersebut dengan menukar karakter yang uppercase menjadi lowercase, dan sebaliknya. Spasi dan simbol diabaikan.
 
 function tukarBesarKecil(kalimat) {
-  // you can only write your code here!
+  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lower = 'abcdefghijklmnopqrstuvwxyz';
+  let akhir = [];
+
+  for(let i = 0; i < kalimat.length; i++){
+    if(upper.indexOf(kalimat[i]) !== -1){
+      akhir.push(kalimat[i].toLowerCase());
+    } else if(lower.indexOf(kalimat[i]) !== -1){
+      akhir.push(kalimat[i].toUpperCase());
+    } else{
+      akhir.push(kalimat[i]);
+    }
+  }
+  return akhir.join("");
 }
 
 // TEST CASES

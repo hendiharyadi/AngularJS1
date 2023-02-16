@@ -5,13 +5,8 @@
 // Contohnya, halo akan menjadi ahlo. Kamu tidak perlu memikirkan apabila ada simbol ataupun angka didalam string tersebut.
 
 function urutkanAbjad(str) {
-  let abjadBaru = kata.split("");
-  for(var i = 0; i < abjadBaru.length; i++){
-    let n = abjadBaru[i].charCodeAt() - 'a'.charCodeAt();
-    n = (n + 1)%26;
-    abjadBaru[i] = String.fromCharCode(n + 'a'.charCodeAt());
-  }
-  return abjadBaru.join("");
+  let urutan = str.split('').sort().join('');
+  return urutan
 }
 
 // TEST CASES

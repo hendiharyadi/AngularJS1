@@ -6,7 +6,7 @@
 
 function ubahHuruf(kata) {
   let abjadBaru = kata.split("");
-  for(var i = 0; i < abjadBaru.length; i++){
+  for(let i = 0; i < abjadBaru.length; i++){
     let n = abjadBaru[i].charCodeAt() - 'a'.charCodeAt();
     n = (n + 1)%26;
     abjadBaru[i] = String.fromCharCode(n + 'a'.charCodeAt());

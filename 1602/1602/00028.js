@@ -5,7 +5,9 @@
 // Jika tidak ditemukan sama sekali, kembalikan nilai false.
 
 function checkAB(num) {
-  // you can only write your code here!
+  return(
+    /[a___b]/.test(num)
+  );
 }
 
 // TEST CASES
