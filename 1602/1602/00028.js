@@ -5,9 +5,13 @@
 // Jika tidak ditemukan sama sekali, kembalikan nilai false.
 
 function checkAB(num) {
-  return(
-    /[a___b]/.test(num)
-  );
+  var cek = num.search(/a...b/);
+  if (cek > -1) {
+    return "true";
+  }
+  else {
+    return "false";
+  }
 }
 
 // TEST CASES

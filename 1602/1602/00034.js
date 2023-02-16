@@ -13,7 +13,15 @@
 // 10 => 1
 
 function makanTerusRekursif(waktu) {
-  // you can only write your code here!
+  let counter = 0;
+  if (waktu <= 0){
+    return 0;
+  } else{
+    waktu = makanTerusRekursif(waktu - 15);
+    counter = counter++;
+  }
+  return counter;
+  
 }
 
 // TEST CASES

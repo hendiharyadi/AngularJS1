@@ -7,7 +7,20 @@
 // Contoh, jika angka adalah 8, walaupun dia sudah palindrome, harus mencari angka selanjutnya yang palindrome, yaitu 9.
 
 function angkaPalindrome(num) {
-  // you can only write your code here!
+  let reverseNum = 0;
+  let numnum = num;
+
+  while (numnum > 0){
+    let lastDigit = numnum %10;
+    reverseNum = reverseNum*10 + lastDigit;
+    numnum = numnum/10;
+  }
+
+  if(num == reverseNum){
+    return true;
+  } else{
+    return false;
+  }
 }
 
 // TEST CASES

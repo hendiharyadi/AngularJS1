@@ -16,23 +16,51 @@
 // Semua manipulasi string (changeVocals, reverseWord, setLowerUpperCase, removeSpaces) diletakkan di passwordGenerator dan return password-nya dari function ini juga
 
 function changeVocals (str) {
-  //code di sini
+  let vokal = str.split("");
+  for(let i = 0; i < vokal.length; i++){
+    let n = vokal[i].charCodeAt() + 'a'.charCodeAt();
+    n = (n + 1)%26;
+    vokal[i] = String.fromCharCode(n + 'a'.charCodeAt());
+  }
+  vokal.join("");
+  return vokal;
 }
 
 function reverseWord (str) {
-  //code di sini
+  let pertama = changeVocals();
+  for(var i = str.length - 1; i >= 0; i--){
+    pertama += str[i];
+  }
+  return pertama;
 }
 
 function setLowerUpperCase (str) {
-  //code di sini
+  let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lower = 'abcdefghijklmnopqrstuvwxyz';
+  let akhir = reverseWord();
+
+  for(let i = 0; i < kalimat.length; i++){
+    if(upper.indexOf(kalimat[i]) !== -1){
+      akhir.push(kalimat[i].toLowerCase());
+    } else if(lower.indexOf(kalimat[i]) !== -1){
+      akhir.push(kalimat[i].toUpperCase());
+    } else{
+      akhir.push(kalimat[i]);
+    }
+  }
+  akhir.join("");
+  return akhir;
 }
 
 function removeSpaces (str) {
-  //code di sini
+  let ketiga = setLowerUpperCase();
+  ketiga = str.replaceAll(' ', '');
+  return ketiga;
 }
 
 function passwordGenerator (name) {
-  //code di sini
+  let terakhir = removeSpaces(name);
+  return terakhir;
 }
 
 console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
