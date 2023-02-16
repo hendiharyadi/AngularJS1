@@ -9,7 +9,11 @@
 // 512, berarti outputnya adalah 8, karena 5 + 1 + 2 = 8. 1542, berarti outputnya adalah 12, karena 1 + 5 + 4 + 2 = 12.
 
 function totalDigitRekursif(angka) {
-  // you can only write your code here!
+  if(angka === Number(angka.toString().slice(-1))){
+    return Number(angka.toString().slice(-1));
+  } else{
+    return Number(angka.toString().substring(0,1))+totalDigitRekursif(Number(angka.toString().substring(1)));
+  }
 }
 
 // TEST CASES

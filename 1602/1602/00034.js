@@ -16,12 +16,9 @@ function makanTerusRekursif(waktu) {
   let counter = 0;
   if (waktu <= 0){
     return 0;
-  } else{
-    waktu = makanTerusRekursif(waktu - 15);
-    counter = counter++;
+  } else{  
+    return waktu = makanTerusRekursif(waktu - 15);
   }
-  return counter;
-  
 }
 
 // TEST CASES

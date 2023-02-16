@@ -5,7 +5,7 @@
 // Contoh, jika arr adalah [1, 2, 3, 4, 5], maka function akan mereturn [120, 60, 40, 30, 24], karena 120 adalah 2 * 3 * 4 * 5, 60 adalah 1 * 3 * 4 * 5, 40 adalah 1 * 2 * 4 * 5, dan seterusnya.
 
 function perkalianUnik(arr) {
-  // you can only write your code here!
+
 }
 
 // TEST CASES

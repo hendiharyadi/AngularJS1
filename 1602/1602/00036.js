@@ -10,7 +10,11 @@
 // 3 => 3, karena sudah satu digit 24 => 8. Karena 24 dua digit, maka kita lakukan 2 * 4 = 8. 8 satu digit, maka hasilnya adalah 8. 654 => 0. Karena 654 tiga digit, maka lakukan 6 * 5 * 4 = 120. 120 tiga digit, maka lakukan 1 * 2 * 0 = 0. 0 satu digit, maka hasilnya adalah 0.
 
 function kaliTerusRekursif(angka) {
-  // you can only write your code here!
+  if(angka === Number(angka.toString().slice(-1))){
+    return Number(angka.toString().slice(-1));
+  } else{
+    return kaliTerusRekursif(Number(angka.toString().substring(0,1))*kaliTerusRekursif(Number(angka.toString().substring(1))));
+  }
 }
 
 // TEST CASES

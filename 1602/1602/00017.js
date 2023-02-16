@@ -5,7 +5,8 @@
 // Contoh, jika arr adalah ['x', ' ', 'o', ' ', ' ', 'x'], maka jarak terdekat dari 'o' ke 'x' adalah 2. Jika tidak ditemukan 'x' sama sekali, function akan me-return nilai 0.
 
 function targetTerdekat(arr) {
-  // you can only write your code here!
+  let jarak = arr.indexOf('x') - arr.indexOf('o');
+  return jarak > 0 ? jarak : (arr.length-1) + (arr.indexOf('x') - arr.indexOf('o'));
 }
 
 // TEST CASES

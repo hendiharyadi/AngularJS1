@@ -5,7 +5,11 @@
 // Contoh, jika angka adalah 183928, maka function akan me-return 92, pasangan dua digit angka yang paling besar diantara yang lainnya.
 
 function pasanganTerbesar(num) {
-  // you can only write your code here!
+  let hasil = Array.from(String(num)).reduce((terbesar, curr, index, arr) => {
+    const besar = parseInt(arr[index] + arr[index+1], 10);
+    return besar > terbesar ? besar : terbesar;
+  }, 0);
+  return hasil;
 }
 
 // TEST CASES

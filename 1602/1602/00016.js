@@ -5,7 +5,15 @@
 // Deret geometri adalah sebuah deret dimana perbedaan setiap angka di deret tersebut konsisten secara perkalian. Contoh, [1, 3, 9, 27, 81] adalah deret aritmatika dengan pertambahan nilai sebesar pengalian 3, dan [1, 3, 9, 27, 48] bukanlah deret aritmatika karena tidak perbedaan selisih antar angka yang tidak konsisten secara perkalian (27 * 3 bukanlah 48!).
 
 function tentukanDeretGeometri(arr) {
-  // you can only write your code here!
+  let hasil;
+  let bagi = arr[1] / arr[0];
+  for(let i = 1; i < arr.length-1; i++) {
+    hasil = arr[i] * bagi === arr[i+1] ? true : false;
+    if (!hasil) {
+        break;
+    }
+  }
+  return hasil;
 }
 
 // TEST CASES

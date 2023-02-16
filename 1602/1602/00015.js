@@ -6,10 +6,14 @@
 // Contoh, [2, 4, 6, 8] adalah deret aritmatika dengan pertambahan nilai sebesar 2, dan [2, 4, 6, 9] bukanlah deret aritmatika karena tidak perbedaan selisih antar angka yang tidak konsisten.
 
 function tentukanDeretAritmatika(arr) {
-  for(let i = 0; i < arr.length; i++){
-
+  let hasil;
+  for(let i = 1; i < arr.length-1; i++){
+    hasil = arr[i+1] - arr[i] === arr[0] ? true : false;
+    if(!hasil){
+      break;
+    }
   }
-
+  return hasil
 }
 
 // TEST CASES
