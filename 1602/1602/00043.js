@@ -27,7 +27,9 @@
 
 
 function getReport(studentGrades) {
-  // only code here..
+
+  let newObj = studentGrades.map(stud => ({classCode: stud.classCode, passed:stud.name, failed:stud.name}));
+  return newObj;
 }
 
 
